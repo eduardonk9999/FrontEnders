@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { Saira_Stencil_One } from "next/font/google";
+import { PrimaryIpuntSearchIcon } from "./primary-input";
 
 const sairaStencil = Saira_Stencil_One({ 
   weight: ['400'],
@@ -33,7 +34,12 @@ export function Header(props : HeaderProps) {
         <TagHeader>
             <Logo className={sairaStencil.className}>
                 Capputeeno
-            </Logo>    
+            </Logo>
+            <div>
+                <PrimaryIpuntSearchIcon 
+                    placeholder="Teste"
+                />
+            </div>    
         </TagHeader>
     )
 }
