@@ -1,3 +1,4 @@
+import Image from "next/image"
 import styled from "styled-components"
 
 interface ProductCardProps {
@@ -18,23 +19,45 @@ const Card = styled.div`
 
     width: 256px;
 
-    image {
+    img {
         width: 256px;
-        height: 300px;
+        height: auto;
     }
     
     h3 {
         font-weight: 300;
         font-size: 16px;
         line-height: 150%;
+        color: #000;
     }
+
+    p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        color: #000;
+    }
+
+
+    > div {
+        width: 228px;
+        height: 1px;
+        left: 12px;
+        top: 340px;
+        margin: 8px 0;
+
+        background: #DCE2E6;
+    }
+
 `
 
 export function ProductCart(props : ProductCardProps) {
     return(
         <Card>
-            <image href={props.image}/>
+            
+            <img src={props.image}/>
             <h3>{props.title}</h3>
+            <div></div>
             <p>{props.price}</p>
         </Card>
     )
